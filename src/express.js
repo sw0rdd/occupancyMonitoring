@@ -37,9 +37,6 @@ app.use('/', occupancyRoute)
 app.use('/api/occupancy', occupancyRoute) 
 
 
-// update route
-// app.use('/api/occupancy/:zone', occupancyRoute)
-
 
 export default (port = process.env.PORT || 3000) => {
     app.listen(port, '0.0.0.0', () => {

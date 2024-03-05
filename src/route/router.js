@@ -2,14 +2,13 @@ import express from 'express';
 
 import * as controller from '../controller/controller.js';
 
-const occupancyRoute = express.Router();
+const router = express.Router();
 
 
-occupancyRoute.get('/', controller.getOccupancy);
+router.get('/latest', controller.getLatestOccupancy);
 
-occupancyRoute.post('/', controller.postOccupancy);
+router.post('/update', controller.updateOccupancy);
 
-// occupancyRoute.put('/api/occupancy/:zone', controller.updateOccupancy);
+router.get('/all', controller.getAllOccupancyData);
 
-
-export default occupancyRoute;
+export default router;
