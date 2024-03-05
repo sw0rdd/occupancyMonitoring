@@ -1,0 +1,13 @@
+<div class="live-data">
+    <% if(response) { %>
+        <div>
+            <p id="entryCount">Entry: <%= response.entry %></p>
+            <p id="groundFloorCount">Ground Floor: <%= response.groundFloor %></p>
+            <p id="firstFloorCount">First Floor: <%= response.firstFloor %></p>
+            <p id="secondFloorCount">Second Floor: <%= response.secondFloor %></p>
+            <p id="timeStamp">Timestamp: <%= response.timestamp %></p>
+        </div>
+    <% } else { %>
+        <p class="no-data">No data available</p>
+    <% } %>
+</div>

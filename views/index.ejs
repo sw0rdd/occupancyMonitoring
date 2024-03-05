@@ -1,15 +1,2 @@
-<div class="container">
-    <h1>Library Occupancy</h1>
-    <% if (occupancyData && occupancyData.length > 0) { %>
-        <% occupancyData.forEach(function(data) { %>
-            <div class="zone">
-                <div class="zone-header">Zone: <%= data.zone %></div>
-                <div class="zone-body">Occupancy: <%= data.occupancy %></div>
-                <div class="zone-body">Timestamp: <%= new Date(data.timestamp).toLocaleString() %></div>
-            </div>
-        <% }) %>
-    <% } else { %>
-        <p>No occupancy data available.</p>
-    <% } %>
-</div>
+hello world
 

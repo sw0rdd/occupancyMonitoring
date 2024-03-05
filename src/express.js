@@ -2,8 +2,10 @@ import express from 'express';
 import logger from 'morgan';
 import mongoose from 'mongoose';
 import expressLayout from 'express-ejs-layouts';
-import Occupancy from './model/people_count.js';
-import occupancyRoute from './route/router.js';
+import webRouter from './route/webRoutes.js';
+import apiRouter from './route/apiRoutes.js';
+import { initIo } from './socket.js';
+import {createServer} from 'http';
 
 
 import dotenv from 'dotenv';
@@ -22,25 +24,25 @@ mongoose.connect(process.env.MONGODB_URI)
     console.log('Error connecting to MongoDB', err)
   })
 
-app.use(logger('dev'))
+app.set('layout', 'layouts/layout')
 app.use(express.static('public'))
+app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.set('layout', 'layouts/layout')
 app.use(expressLayout)
 
 
-// get route 
-app.use('/', occupancyRoute)
-
-// post route
-app.use('/api/occupancy', occupancyRoute) 
+// Use API and Web routes
+app.use('/api', apiRouter);
+app.use('/', webRouter);
 
 
 
 export default (port = process.env.PORT || 3000) => {
-    app.listen(port, '0.0.0.0', () => {
-        console.log(`Listening on port ${port} on all network interfaces`)
-    })
+  const httpServer = createServer(app)
+  initIo(httpServer)
+
+  httpServer.listen(port, () => {
+    console.log(`Server is running on port ${port}`)
+  })
 }
-      

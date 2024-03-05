@@ -19,3 +19,35 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+.live-data {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.live-data div {
+    margin-bottom: 20px;
+}
+
+.live-data p {
+    color: #333;
+    font-size: 16px;
+}
+
+.live-data p.no-data {
+    color: red;
+    text-align: center;
+}
