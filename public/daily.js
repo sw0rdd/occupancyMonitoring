@@ -31,7 +31,7 @@ const occupancyChart = new Chart(ctx, {
                 ticks: {
                     source: 'labels', // Use 'labels' or 'data'
                     autoSkip: true,
-                    maxTicksLimit: 15 // Limit the number of ticks on the x-axis
+                    maxTicksLimit: 10 // Limit the number of ticks on the x-axis
                 }
             },
             y: {

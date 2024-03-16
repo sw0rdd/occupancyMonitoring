@@ -21,9 +21,9 @@ export const getLatestOccupancy = async (req, res) => {
                 firstFloor,
                 timestamp: formattedTimestamp // Using the formatted timestamp
             };
-            res.render('live', {response});
+            res.render('live', {response, page: 'live'});
         } else {
-            res.status(404).send('No occupancy data found');
+            res.render('live', {response: null, page: 'live'})
         }
     } catch (error) {
         console.log(error);
@@ -35,15 +35,25 @@ export const getLatestOccupancy = async (req, res) => {
 
 
 
-/**
- * Get the daily occupancy data from the database
- */
+
 export const renderDaily = async (req, res) => {
     try {
         // Simply render the daily page without passing data
-        res.render('daily');
+        res.render('daily', {page: 'daily'});
     } catch (error) {
         console.error('Error rendering daily occupancy page:', error);
+        res.status(500).send('Internal server error');
+    }
+};
+
+
+
+export const renderFloors = async (req, res) => {
+    try {
+        // Simply render the daily page without passing data
+        res.render('floors', {page: 'floors'});
+    } catch (error) {
+        console.error('Error rendering floors occupancy page:', error);
         res.status(500).send('Internal server error');
     }
 };

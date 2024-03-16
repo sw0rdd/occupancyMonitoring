@@ -10,9 +10,11 @@ router.get('/occupancy/live', webController.getLatestOccupancy);
 // Web route for serving the daily occupancy data page
 router.get('/occupancy/daily', webController.renderDaily);
 
+router.get('/occupancy/floors', webController.renderFloors)
+
 // Home page route
 router.get('/', (req, res) => {
-  res.render('index');
+  res.render('index', {page: 'index'});
 });
 
 export default router;
