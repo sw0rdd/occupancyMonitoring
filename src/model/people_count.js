@@ -4,14 +4,6 @@ dotenv.config();
 
 
 
-// Occupancy data schema 
-// const occupancySchema = new mongoose.Schema({
-//     zone: String,
-//     occupancy: Number,
-//     timestamp: Date
-// });
-
-
 const occupancySchema = new mongoose.Schema({
   entry: {
     type: Number,
@@ -33,7 +25,6 @@ const occupancySchema = new mongoose.Schema({
 });
 
 occupancySchema.virtual('firstFloor').get(function() {
-  // Assuming 'entry' is the total count of people in the library
   return this.entry - this.groundFloor - this.secondFloor;
 });
 

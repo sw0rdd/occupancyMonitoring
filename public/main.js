@@ -54,7 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     socket.on('occupancyUpdated', (data) => {
         console.log('Occupancy updated: ', data);
-        // Assuming you have elements with IDs corresponding to these values
         document.getElementById('entryCount').textContent = `${data.entry}`;
         document.getElementById('groundFloorCount').textContent = `${data.groundFloor}`;
         document.getElementById('firstFloorCount').textContent = `${data.firstFloor}`;

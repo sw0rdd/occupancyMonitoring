@@ -67,6 +67,9 @@ export const fetchDailyOccupancyData = async (req, res) => {
 };
 
 
+/**
+ * Get the hourly occupancy data from the database
+ */
 export const fetchFloorsOccupancyData = async (req, res) => {
     try {
         const dateOfInterest = req.query.date || moment().format('YYYY-MM-DD');

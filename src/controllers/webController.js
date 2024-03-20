@@ -35,7 +35,9 @@ export const getLatestOccupancy = async (req, res) => {
 
 
 
-
+/**
+ * render daily.ejs
+ */
 export const renderDaily = async (req, res) => {
     try {
         // Simply render the daily page without passing data
@@ -48,6 +50,9 @@ export const renderDaily = async (req, res) => {
 
 
 
+/**
+ * render floors.ejs
+ */
 export const renderFloors = async (req, res) => {
     try {
         // Simply render the daily page without passing data
