@@ -6,6 +6,8 @@ This project is made for the course "Project with Embedded Systems 2DT304".
 ## Contributers
 Seif-Alamir Yousef & Ludvig Svensson
 
+## Project Demo [Video](https://www.youtube.com/watch?v=ATyk5O6ZMHE)
+
 # Academic Report 
 In this [Academic Report](https://docs.google.com/document/d/1X3nvK4McUbsehoqTqAhvU4GHUhgysJOzC636muut5SY/edit?usp=sharing) you will detailed information about the project.
 
