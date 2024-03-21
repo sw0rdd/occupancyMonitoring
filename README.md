@@ -1,13 +1,14 @@
 # Real-Time Occupancy Monitoring System for University Library
 
 This project is designed to monitor the occupancy of a library across different floors and zones using Raspberry Pi Pico W units with ultrasonic sensors and an Arduino board. The data collected by the Pico units is sent to a central Arduino, which then posts the information to a local web server. The server runs on Node.js and stores occupancy data in MongoDB.<br><br>
-This project is made for the course "Project with Embedded Systems 2DT304". 
+This project is made for the course "Project with Embedded Systems 2DT304". <br>
+
+Project Demo [Video](https://www.youtube.com/watch?v=ATyk5O6ZMHE)
 
 ## Contributers
 Seif-Alamir Yousef & Ludvig Svensson
 
-## Project Demo [Video](https://www.youtube.com/watch?v=ATyk5O6ZMHE)
-
+## 
 # Academic Report 
 In this [Academic Report](https://docs.google.com/document/d/1X3nvK4McUbsehoqTqAhvU4GHUhgysJOzC636muut5SY/edit?usp=sharing) you will detailed information about the project.
 
